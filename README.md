@@ -2011,7 +2011,7 @@ HTTP POST
 | pay_dt     | It's time to pay points. (System milliseconds) 예) 1577343412017 | long           |
 | app_nm     | It is the name of the ads that participated.                 | string(120)    |
 | pay\_amt   | the amount settled                                           | long           |
-| actn\_id   | <p>- 0 : cpi</p><p>- 1 : cpl</p><p>- 2 : cpa</p><p>- 5 : cps</p> | int            |
+| actn\_id   | <p>- 0 : CPI</p><p>- 1 : CPE</p><p>- 2 : CPA</p><p>- 5 : CPS</p> | int            |
 
 ##### Return value processing
 
