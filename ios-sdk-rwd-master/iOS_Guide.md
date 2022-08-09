@@ -3,7 +3,7 @@
 ## Table Of Contents
 1. [SDK Get Stared](#1-SDK-Get-Stared)
 
-   * [Download Library](#Download-Library-1)
+   * [Download Library](#Download-Library)
    * [Add Framework](#Add-Framework) 
    * [Processing flow for offer](#Processing-flow-for-offer)
    * [Initialize Tnk Object](#Initialize-Tnk-Object)
