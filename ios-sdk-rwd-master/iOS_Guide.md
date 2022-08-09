@@ -48,7 +48,7 @@
    * [Settings Style of Ads Details screen](#Settings-Style-of-Ads-Details-screen)
    * [Example](#Example-8)
 
-   E. [Callback URL](#마-callback-url)
+   E. [Callback URL](#E-callback-url)
 
    * [Call Method](#Call-Method)
    * [Parameters](#parameters-15)
