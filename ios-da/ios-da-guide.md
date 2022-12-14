@@ -23,7 +23,7 @@
 
 ### Download SDK
 
-**[[iOS Pub SDK Download v1.07](./sdk/TnkPubSdk.v1.07.zip)]**
+**[[iOS Pub SDK Download v1.07](https://github.com/tnkfactory/ios-pub-sdk/blob/main/sdk/TnkPubSdk.v1.07.zip)]**
 
 ### Framework registration
 
@@ -33,8 +33,8 @@ Move that folder to the XCode project folder you want to apply.
 Verify that theTnkPubSDK.xcframework exists in XCode -> Target -> General -> Framework, Libraries, and Embedded Content, and change the Embedded setting to Embedded & Sign.
 
 Please refer to the image below.
-![drag_framework](./img/drag_framework.png)
-![framework_embed](./img/framework_embed.png)
+![drag_framework](https://github.com/tnkfactory/ios-pub-sdk/raw/main/img/drag_framework.png)
+![framework_embed](https://github.com/tnkfactory/ios-pub-sdk/raw/main/img/framework_embed.png)
 
 
 ### <a name="1-1"></a>Test Flight
@@ -113,7 +113,7 @@ class ViewController: UIViewController, TnkAdListener {
 In Test Flight, we could easily conduct the test without having to register an account separately. However, in order to receive the actual Ad, you must first register Inventory on the Tnk Publish Site and add the Publsiher ID to the info.plist file.
 Please register the tnk_pub_id by referring to the sample below.
 
-![tnk_pub_id](./img/tnk_pub_id.png)
+![tnk_pub_id](https://github.com/tnkfactory/ios-pub-sdk/raw/main/img/tnk_pub_id.png)
 
 Once you have registered your Publiher ID, no more ads will appear in the Test Flight code above. You must register Placement according to the advertising type on the Tnk Publish Site and use the name of the registered Placement to display the actual advertisement.
 
@@ -264,13 +264,13 @@ if (adItem.isLoaded()) {
 }
 ```
 
-##<a name="3"></a> 3. Banner Ad
+## <a name="3"></a>3. Banner Ad
 
 #### Create Container View
 
 To use banner ads, you must first create a view(Container View) to show banner ads and then set it to TnkBannerView. Create a UIView to display the TnkBannerView in the StoryBoard or Xib file.
 
-![banner_layout](./img/banner_layout.png)
+![banner_layout](https://github.com/tnkfactory/ios-pub-sdk/raw/main/img/banner_layout.png)
 
 #### Create Banner View and Load Ad
 
@@ -345,7 +345,7 @@ class ViewController: UIViewController, TnkAdListener {
 
 Use the StoryBoard or Xib file to configure the View to display native ads, as shown in the image example below. Native Ads provide main images, icon images, advertisement titles, and Ad descriptions.
 
-![native_layout](./img/native_layout.png)
+![native_layout](https://github.com/tnkfactory/ios-pub-sdk/raw/main/img/native_layout.png)
 
 #### <a name="4-2"></a>Create Native Object and Ad load
 
