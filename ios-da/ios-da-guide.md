@@ -1,8 +1,8 @@
 # Tnk DisplayAd SDK (for iOS)
 
-## Table Of Contents
+## Index
 
-1. [SDK Get Started](#1)
+1. [Installation](#1)
    * [Test Flight](#1-1)
    * [Publisher ID Settings](#1-2)
    * [COPPA settings](#1-3)
@@ -19,7 +19,7 @@
 5. [Video Ad](#5)
 6. [Use AdListener](#6)
 
-## <a name="1"></a>1. SDK Get Started
+## <a name="1"></a>1. Installation
 
 ### Download SDK
 
