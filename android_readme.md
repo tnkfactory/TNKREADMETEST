@@ -4,7 +4,7 @@
 
 1. [SDK Get Stared](#1-SDK-Get-Stared)
 
-   * [Add SDK Library](#Add-SDK-Liblary) 
+   * [Add SDK Library](#Add-SDK-Liblary)
    * [AndropidManifest configurations](#AndroidManifest-configurations)
      * [Application ID Settings](#Application-ID-Settings)
      * [Add mandatory permissions](#Permissions-Settingss)
@@ -13,11 +13,11 @@
    * [COPPA settings](#COPPA-settings)
 
 2. [Show Ads List](#2-Show-Ads-List)
-   
+
 3. [Publisher API](#3-publisher-api)
 
    A. [Output ads list](#A-Output-ads-list)
-   
+
    * [SetUp user identification](#Set-Up-user-identification)
      * [Method](#method)
      * [Parameters](#parameters)
@@ -93,7 +93,7 @@
      * [TnkSession.buyCompleted()](#tnksessionbuycompleted)
    * [User Information Settings](#User-Information-Settings)
 
-   
+
 
 ## 1. SDK Get Stared
 
@@ -198,7 +198,7 @@ AndroidManifest.xml example
         ...
         ...
     </application>
-</manifest>	
+</manifest>
 ```
 
 
@@ -228,7 +228,7 @@ Link : [How to add a Test Device](https://github.com/tnkfactory/android-sdk-rwd/
 
 You can print out the list of ads through the following process.
 
-1) Initialize TNK SDK 
+1) Initialize TNK SDK
 
 2) Set up user identification
 
@@ -522,7 +522,7 @@ adlistView.setListener(new TnkAdListener() {
 
   @Override
   public void onShow() {
-    Log.d("tnkad", "#### onShow "); 
+    Log.d("tnkad", "#### onShow ");
   }
 
   @Override
@@ -609,7 +609,7 @@ The tnkadlistener a full-page advertisement ([Interstitial Ad](http://docs.tnkad
  public static final int FAIL_NO_AD = -1;  // no ad available
  public static final int FAIL_NO_IMAGE = -2; // ad image not available
  public static final int FAIL_TIMEOUT = -3; // ad arrived after 5 secs.
- public static final int FAIL_CANCELED = -4; // ad frequency settings 
+ public static final int FAIL_CANCELED = -4; // ad frequency settings
 
  public static final int FAIL_SYSTEM = -9;
 
@@ -655,7 +655,7 @@ However, if you create and call a separate thread other than the main UI Thread,
 
 ##### [Asynchronous processing]
 
-###### Method 
+###### Method
 
   - void TnkSession.queryPoint(Context context, boolean showProgress, ServiceCallback callback)
 
@@ -695,7 +695,7 @@ public void onCreate(Bundle savedInstanceState) {
 
 ##### [Synchronous processing]
 
-###### Method 
+###### Method
 
   - int TnkSession.queryPoint(Context context)
 
@@ -734,7 +734,7 @@ However, when a user purchases an item provided by the posting app, he or she ca
 
 ##### [asynchronous processing]
 
-###### Method 
+###### Method
 
   - void TnkSession.purchaseItem(Context context, int pointCost, String itemId, boolean showProgress, ServiceCallback callback)
 
@@ -776,7 +776,7 @@ public void onClick(View v) {
 
 ##### [synchronous processing]
 
-###### Method 
+###### Method
 
   - long[] TnkSession.purchaseItem(Context context, int pointCost, String itemId)
 
@@ -803,7 +803,7 @@ The ability to withdraw the entire managed user point from the TNK server at onc
 
 ##### [asynchronous processing]
 
-###### Method 
+###### Method
 
   - void TnkSession.withdrawPoints(Context context, String desc, boolean showProgress, ServiceCallback callback)
 
@@ -841,7 +841,7 @@ public void onClick(View v) {
 
 ##### [asynchronous processing]
 
-###### Method 
+###### Method
 
   - int TnkSession.withdrawPoints(Context context, String desc)
 
@@ -867,7 +867,7 @@ We provide a synchronization method and you must create a separate Thread to cal
 
 ##### [synchronous processing]
 
-###### Method 
+###### Method
 
   - long TnkSession.getEarnPoints(Context context)
 
@@ -905,7 +905,7 @@ If you stop posting advertisements in [Posting Information] on the Tnk site, the
 Therefore, it is recommended that the charging station button itself is not visible on the screen in case you stop posting ads in the future.
 To this end, it provides a method to inquire the status of the advertisement posting of the current publishing app.
 
-##### Method 
+##### Method
 
   - void TnkSession.queryPublishState(Context context, boolean showProgress, ServiceCallback callback)
 
@@ -922,7 +922,7 @@ To this end, it provides a method to inquire the status of the advertisement pos
 ```java
 final Button button = (Button)findViewById(R.id.main_ad);
 
-// ... 
+// ...
 
 TnkSession.queryPublishState(this, false, new ServiceCallback() {
 
@@ -942,7 +942,7 @@ TnkSession.queryPublishState(this, false, new ServiceCallback() {
 this method is also good to check the status of the advertisement posting so that the charging station button is visible or invisible, but it is more desirable to determine whether there is an advertisement that can be accumulated at present and expose the button.
 To this end, we provide the method to check the advertisement information that can be accumulated as follows.
 
-##### Method 
+##### Method
 
   - void TnkSession.queryAdvertiseCount(Context context, boolean showProgress, ServiceCallback callback)
 
@@ -958,7 +958,7 @@ To this end, we provide the method to check the advertisement information that c
 
 Determines whether to output the logs generated by the SDK in TNK. Please set it to true for the test and false for the release build.
 
-##### Method 
+##### Method
 
   - void TnkSession.enableLogging(boolean trueOrFalse)
 
@@ -966,7 +966,7 @@ Determines whether to output the logs generated by the SDK in TNK. Please set it
 
 Set whether you agree to collect personal information. When setting true, the popup of the personal information collection agreement does not appear in the offer wall. If you want to display the pop-up window again, please set it to false.
 
-##### Method 
+##### Method
 
   - void TnkSession.queryPoint(Context context, boolean isAgree)
 
@@ -986,9 +986,9 @@ The templates included in the SDK are also configured using TnkLayout and can be
 
 The steps to apply TnkLayout are as follows.
 
-1. advertising list screen, screen for details (icons, type, short circuit between feed), pop-up screen configuration of the list item layout and define them as xml.There are three layout xml winha to change and not need to complete all layout million you can make. 
+1. advertising list screen, screen for details (icons, type, short circuit between feed), pop-up screen configuration of the list item layout and define them as xml.There are three layout xml winha to change and not need to complete all layout million you can make.
 
-2. a layout id of the components as defined within the xml tnklayout to hear objects 
+2. a layout id of the components as defined within the xml tnklayout to hear objects
 
 3. the screen to see if they could deliver with the object tnklayout.
 
@@ -1613,13 +1613,13 @@ There are two types of list styles: icon type and feed type. If you want to chan
 ```java
 public class OfferwallTemplateActivity extends AppCompatActivity {
 	...
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
     	...
-        
+
         TnkSession.showAdList(OfferwallTemplateActivity.this, "Title", makeCustomLayout());
-    
+
     	...
     }
 
@@ -1697,7 +1697,7 @@ public class OfferwallTemplateActivity extends AppCompatActivity {
         res.adwall.detail.confirmTextCPS = "구매하고 {unit}받기";
         return res;
     }
-  
+
   ...
 }
 ```
@@ -1707,7 +1707,7 @@ public class OfferwallTemplateActivity extends AppCompatActivity {
 The SDK contains 16 template designs. The built-in design can be used through Template LayoutUtils.
 
 ```java
-// Blue Style 
+// Blue Style
 TemplateLayoutUtils.getBlueStyle_01(); // IconItem : Basic Square / FeedItem : Square
 TemplateLayoutUtils.getBlueStyle_02(); // IconItem : Basic Square / FeedItem : Button
 TemplateLayoutUtils.getBlueStyle_03(); // IconItem : Basic Ellipse / FeedItem : Square
@@ -1727,7 +1727,7 @@ TemplateLayoutUtils.getRedStyle_06(); // IconItem : Tall Square / FeedItem : But
 TemplateLayoutUtils.getRedStyle_07(); // IconItem : Tall Ellipse / FeedItem : Square
 TemplateLayoutUtils.getRedStyle_08(); // IconItem : Tall Ellipse / FeedItem : Button
 
-													   
+
 // Custom Color
 // 1. For tabless layout
 TemplateLayoutUtils.getCustomPrimaryColor_nor("#999933");
@@ -1748,7 +1748,7 @@ TnkSession.popupAdList(this, "Title", null, TemplateLayoutUtils.getBlueStyle_01(
 
 // AdListView
 TnkSession.createAdListView(this, TemplateLayoutUtils.getBlueStyle_01());
-													   
+
 // tabless layout custom color
 TnkLayout layoutNor = TemplateLayoutUtils.getCustomPrimaryColor_nor("#999933");
 TnkSession.showAdList(OfferwallTemplateActivity.this, "Title", layoutNor);
@@ -2121,24 +2121,24 @@ The overall Android Manifest file looks as follows.
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.myapplication" >
 
-    <uses-permission android:name="android.permission.INTERNET" /> 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
 
 
-    <application android:icon="@drawable/ic_launcher" android:label="@string/app_name"> 
+    <application android:icon="@drawable/ic_launcher" android:label="@string/app_name">
 
         ... your activities ...
 
- 
+
         <meta-data android:name="tnkad_app_id" android:value="your-app-id-from-tnk-sites" />
 
         <meta-data android:name="tnkad_tracking" android:value="true" />    
 
     </application>
 
-</manifest> 
+</manifest>
 ```
 
 ### Initialize TNK SDK
@@ -2205,7 +2205,7 @@ TnkSession.actionCompleted(this, "signup_completed");
 TnkSession.actionCompleted(this, "profile_entered");
 
 // Friend recommendation
-TnkSession.actionCompleted(this, "friend_invite"); 
+TnkSession.actionCompleted(this, "friend_invite");
 ```
 
 ### Purchase Activity Analysis
@@ -2253,4 +2253,4 @@ TnkSession.setUserAge(this,23);
 TnkSession.setUserGender(this,TnkCode.MALE);
 
 // Gender Settings (FEMALE)
-TnkSession.setUserGender(this,TnkCode.FEMALE); 
+TnkSession.setUserGender(this,TnkCode.FEMALE);
