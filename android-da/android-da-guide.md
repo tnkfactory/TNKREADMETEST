@@ -1,8 +1,8 @@
 # Tnkfactory DisplayAd SDK (for Android)
 
-## Table Of Contents
+## Index
 
-1. [SDK Get Started](#1)
+1. [Installation](#1)
    * [Test Flight](#1-1)
    * [Publisher ID Settings](#1-2)
    * [COPPA settings](#1-3)
@@ -41,7 +41,7 @@
    * [Confirm Earned Rewards](#6-1)
 7. [Use AdListener](#7)
 
-## <a name="1"></a>1. SDK Get Started
+## <a name="1"></a>1. Installation
 In your project-level build.gradle file, include TNK SDK's Maven repository and Maven central repository in both your buildscript and allprojects sections:
 
 
